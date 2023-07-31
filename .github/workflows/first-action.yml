@@ -1,0 +1,13 @@
+name: first workflow
+## workflow_dispatch means event waits for manual action from user
+on: workflow_dispatch
+jobs:
+## this is not a keyword, its a job name specified by user
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello world!"
+      - name: Print goodbye
+        run: echo "Done, goodbye"
+      
